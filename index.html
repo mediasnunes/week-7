@@ -6,9 +6,35 @@
     <title>Weather</title>
 </head>
 <body>
+    <header>
     <h1> Welcome to Weather App</h1>
+    <form>
+        <input type="search"  id="searchbar" placeholder="Enter a city..."required />
+        <input type="submit"  value="Search" id="search-button"/>
+    </form>
+    </header>
+    <main>
+    <div class="current-weather">
+        <div class="current-city">
+        <h2 class="city"> City Name </h2>
+        <p class="date">Date</p>
+        <p class="others">Humidity & Wind</p>
+        </div>
+        <div class="current-temperature">
+            <h1 class="current-temperature"> Number</h1> <span><h1>ºC</h1> </span>
+        </div>
+        <div class="forecast">
+            <span class="Tomorrow">Tomorrow Temperature</span>
+            <span class="NextDay"> NextDay Temperature</span>
+        </div>
+        </main>
+
+
+    </div>
     <footer>
-        Coded by <a href="https://github.com/mediasnunes"> Maria Eduarda </a>, code hosted on <a href="https://github.com/mediasnunes/week-7"> GitHub</a>, site hosted by <a href="https://projectweek7.netlify.app/"> Netlify</a>
+        Coded by <a href="https://github.com/mediasnunes"> Maria Eduarda</a>, 
+        open-source on <a href="https://github.com/mediasnunes/week-7"> GitHub</a> 
+        and hosted by <a href="https://projectweek7.netlify.app/"> Netlify</a>
     </footer>
 </body>
 </html>
