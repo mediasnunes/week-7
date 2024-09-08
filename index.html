@@ -4,37 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./src/index.css">
 </head>
 <body>
+    <div class="weather-app">
     <header>
-    <h1> Welcome to Weather App</h1>
-    <form>
-        <input type="search"  id="searchbar" placeholder="Enter a city..."required />
-        <input type="submit"  value="Search" id="search-button"/>
-    </form>
+    <form id="city-form">
+          <input
+            class="search-entry"
+            type="search"
+            id="city-input"
+            placeholder="Enter a city.."
+            required
+          />
+          <input class="search-button" type="submit" value="Search" />
+        </form>
     </header>
+
     <main>
     <div class="current-weather">
         <div class="current-city">
-        <h2 class="city"> City Name </h2>
-        <p class="date">Date</p>
-        <p class="others">Humidity & Wind</p>
+        <h1 class="city"> Paris </h1>
+        <span class="city-details">
+        <p><span class="date"> Sunday, 8th </span>
+            <br/>
+        <span class="others">Humidity: <strong>60%</strong>, Wind:<strong>2km/h</strong></span></p>
+        </span>
         </div>
         <div class="current-temperature">
-            <h1 class="current-temperature"> Number</h1> <span><h1>ºC</h1> </span>
+                <div class="emoji">☀️</div> 
+                <div class="temperature-value"> 23 </div>
+                <div class="unit">ºC</div>
+        </div>
         </div>
         <div class="forecast">
-            <span class="Tomorrow">Tomorrow Temperature</span>
-            <span class="NextDay"> NextDay Temperature</span>
+            <div class="Tomorrow">Tomorrow Temperature</div>
+            <div class="NextDay"> NextDay Temperature</div>
         </div>
-        </main>
-
-
-    </div>
+ </main>
     <footer>
         Coded by <a href="https://github.com/mediasnunes"> Maria Eduarda</a>, 
         open-source on <a href="https://github.com/mediasnunes/week-7"> GitHub</a> 
         and hosted by <a href="https://projectweek7.netlify.app/"> Netlify</a>
     </footer>
+    </div>
 </body>
 </html>
