@@ -24,29 +24,27 @@
             placeholder="Enter a city.."
             required
           />
-          <input class="search-button" type="submit" value="Search" />
+          <input 
+          class="search-button" 
+          type="submit" 
+          value="Search" />
         </form>
     </header>
 
     <main>
     <div class="current-weather">
         <div class="current-city">
-        <h1 class="city"> Paris </h1>
+        <h1 class="city" id="city"> Paris </h1>
         <span class="city-details">
-        <p><span class="date"> Sunday, 8th </span>
+        <p><span id="time"> Sunday 15:32 </span>, <span id="description"></span>
             <br/>
-        <span class="others">Humidity: <strong>60%</strong>, Wind:<strong>2km/h</strong></span></p>
+        <span class="others">Humidity: <strong><span id="humidity">60</span>%</strong>, Wind:<strong><span id="wind-speed">2</span>km/h</strong></span></p>
         </span>
         </div>
         <div class="current-temperature">
-                <div class="emoji">☀️</div> 
-                <div class="temperature-value"> 23 </div>
+                <div id="icon"></div>
+                <div class="temperature-value" id="temperature"> 23 </div>
                 <div class="unit">ºC</div>
-        </div>
-        </div>
-        <div class="forecast">
-            <div class="Tomorrow">Tomorrow Temperature</div>
-            <div class="NextDay"> NextDay Temperature</div>
         </div>
  </main>
     <footer>
@@ -55,5 +53,6 @@
         and hosted by <a href="https://projectweek7.netlify.app/"> Netlify</a>
     </footer>
     </div>
+    <script src="src/index.js"></script>
 </body>
 </html>
