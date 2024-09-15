@@ -51,8 +51,37 @@ let currentTime = new Date();
 let weekDay = weekDays[currentTime.getDay()];
 let hour = currentTime.getHours();
 let minutes = currentTime.getMinutes();
+if (minutes<10) {
+    minutes = `0${minutes}`;
+}
 let date = document.querySelector("#time");
 let formatedDate = `${weekDay} ${hour}:${minutes}`;
 
 date.innerHTML = `${formatedDate}`;
+
+function displayForecast() {
+let forecastElement = document.querySelector("#forecast");
+let days= ["Sun", "Mon", "Tue", "Wed", "Thu"];
+let forecastHtml = "";
+
+days.forEach(function(day) {
+    forecastHtml =
+      forecastHtml +
+      `
+                <div class="forecast-day">
+                <div class="day"> ${day} </div>
+                <div class="icon">☀️</div>
+                <div class="temperatures">
+                    <div class="min-max-temp"><strong>10</strong></div>
+                    <div class="min-max-temp">20</div>
+                </div>
+                </div>`;
+            }
+        );
+        forecastElement.innerHTML = forecastHtml;
+}
+
 searchCity("Paris");
+displayForecast();
+
+
